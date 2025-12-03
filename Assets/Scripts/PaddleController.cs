@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMoviment : MonoBehaviour
+
 {
-    public bool IsPlayer1;
-    public float speed;
-    public Rigidbody2D rb;
-
-    private float movement;
+    public float speed = 10.0f;
     
-    void Update()
-    {
-         if (IsPlayer1){
-        movement = Input.GetAxisRaw ("Vertical");
+    // Criamos essa variável para digitar "Vertical" ou "Vertical2" na Unity
+    public string nomeDoEixo = "Vertical"; 
 
-    } else {
-        movement = Input.GetAxisRaw ("Vertical2");
+    private Rigidbody2D meuRb;
+
+    void Start()
+    {
+        meuRb = GetComponent<Rigidbody2D>();
     }
 
-    rb.velocity = new Vector2(rb.velocity.x, movement * speed);
-        
+    void Update()
+    {
+        // Agora usamos a variável aqui dentro, e não o texto fixo!
+        float meuY = Input.GetAxisRaw(nomeDoEixo) * speed;
+        meuRb.velocity = new Vector2(0, meuY);
     }
 }

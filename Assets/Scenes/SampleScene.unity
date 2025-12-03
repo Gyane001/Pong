@@ -674,9 +674,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55046164b7b0cfc438fd8e68f15e5d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPlayer1: 1
   speed: 5
-  rb: {fileID: 870733639}
+  nomeDoEixo: Vertical
 --- !u!61 &870733636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -848,9 +847,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55046164b7b0cfc438fd8e68f15e5d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsPlayer1: 0
   speed: 5
-  rb: {fileID: 887859798}
+  nomeDoEixo: Vertical2
 --- !u!61 &887859795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1002,7 +1000,7 @@ GameObject:
   - component: {fileID: 1073726660}
   - component: {fileID: 1073726662}
   m_Layer: 0
-  m_Name: ParedeDir
+  m_Name: GolDireito
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1104,7 +1102,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1132,7 +1130,7 @@ GameObject:
   - component: {fileID: 1363616232}
   - component: {fileID: 1363616234}
   m_Layer: 0
-  m_Name: ParedeEsq
+  m_Name: GolEsquerdo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1234,7 +1232,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1296,7 +1294,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 5
+  m_Constraints: 4
 --- !u!61 &1548480553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1421,7 +1419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42d957e4c9c48b843adc91ada5f08950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

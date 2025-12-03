@@ -3,26 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour
-{   public float speed = 200.0f;
-    private Rigidbody2D _rigidbody;
+{
+    public float speed = 5.0f;
+    private Rigidbody2D meuRb;
 
-    private void Awake()
+    void Start()
     {
-        _rigidbody = GetComponent<Rigidbody2D>();
-    }
+        meuRb = GetComponent<Rigidbody2D>();
 
-    private void Start()
-    {
-        AddStartingForce();
-    }
+        // LÓGICA DO CARA OU COROA:
+        // Random.Range(0, 2) vai dar 0 ou 1.
+        // Se der 0, x vira -1 (Esquerda). Se der 1, x vira 1 (Direita).
+        float x = (Random.Range(0, 2) == 0) ? -1 : 1; 
 
-    private void AddStartingForce()
-    {
-        float x = Random.value < 0.5f ? -1.0f : 1.0f;
-        float y = Random.value < 0.5f ? Random.Range(-1.0f, -0.5f) :
-                                        Random.Range(0.5f, 1.0f);
+        // Fazemos o mesmo para o Y
+        float y = (Random.Range(0, 2) == 0) ? -1 : 1;
 
-        Vector2 direction = new Vector2(x, y);
-        _rigidbody.AddForce(direction * this.speed);
+        meuRb.velocity = new Vector2(x, y) * speed;
     }
 }
