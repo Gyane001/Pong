@@ -5,17 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Precisamos checar se o objeto que entrou é a Bola
-        // A variável 'collision' traz informações sobre quem bateu
-        
-        if (collision.gameObject.name == "Bola") // Ou usar Tags...
-        {
-            Debug.Log("GOL! Reiniciando a bola...");
-            
-            // Aqui vamos mandar a bola reiniciar...
-        }
-    }
+   private void OnTriggerEnter2D(Collider2D collision)
+
+   Start(){
+    collision.transform.position = new Vector2(0, 0);
+   }
 }
 

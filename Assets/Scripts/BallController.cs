@@ -14,6 +14,10 @@ public class Ball : MonoBehaviour
         // LÓGICA DO CARA OU COROA:
         // Random.Range(0, 2) vai dar 0 ou 1.
         // Se der 0, x vira -1 (Esquerda). Se der 1, x vira 1 (Direita).
+        Reiniciar();
+    }
+
+    public void Reiniciar(){
         float x = (Random.Range(0, 2) == 0) ? -1 : 1; 
 
         // Fazemos o mesmo para o Y
@@ -21,4 +25,6 @@ public class Ball : MonoBehaviour
 
         meuRb.velocity = new Vector2(x, y) * speed;
     }
+
+
 }
